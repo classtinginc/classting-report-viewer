@@ -4,7 +4,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import Report from 'Pages/Reportai';
+import Report from 'Pages/reportai';
 
 
 class Routes extends React.Component {

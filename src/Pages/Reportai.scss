@@ -1,0 +1,153 @@
+
+.Reportai-wrapper {
+  background-color: #f8f8f8;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.suggestion {
+  width: 281px;
+  height: 24px;
+  font-family: AppleSDGothicNeo;
+  font-size: 18px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: normal;
+  color: #000000;
+  margin-top: 40px;
+  display: inline-block;
+}
+
+.underline {
+  width: 600px;
+  height: 1px;
+  background-color: #cccccc;
+  margin: auto;
+  margin-top: 60px;
+}
+
+.ic_classting {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  display: inline-block;
+  margin-top: 20px;
+  margin-bottom: 30px;
+
+}
+
+.ic_tab_logo {
+  width: 123px;
+  height: 28.9px;
+  object-fit: contain;
+  display: block;
+  margin: auto;
+  margin-bottom: 7.1px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.address {
+  height: 15px;
+  font-family: AppleSDGothicNeo;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #999999;
+  margin: auto;
+}
+
+.support {
+  height: 15px;
+  font-family: AppleSDGothicNeo;
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #999999;
+  margin: auto;
+  margin-bottom: 40px;
+}
+
+.ai-button {
+  width: 210px;
+  height: 40px;
+  border-radius: 4px;
+  border: solid 2px #4a90e2;
+  display: inline-block;
+  float: right;
+  margin-top: 30px;
+}
+
+.ai-button-text {
+  font-family: AppleSDGothicNeo;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.21;
+  letter-spacing: normal;
+  color: #4a90e2;
+  padding-left: 20px;
+  padding-top: 12px;
+}
+
+.ai-button:hover {
+  background-color: #4a90e2;
+}
+
+.ai-button-text:hover {
+  color: #ffffff;
+}
+
+.report-intro {
+  width: 226px;
+  height: 72px;
+  font-family: AppleSDGothicNeo;
+  font-size: 24px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.5;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.report-intro-style {
+  font-weight: bold;
+}
+
+.report-intro-date {
+  width: 222px;
+  height: 24px;
+  font-family: AppleSDGothicNeo;
+  font-size: 20px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #999999;
+  margin-bottom: 30px;
+}
+
+.network {
+  width: 50px;
+  height: 50px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  border-radius:50%;
+  display: inline-block;
+  float: right;
+  margin-top: 30px;
+}
