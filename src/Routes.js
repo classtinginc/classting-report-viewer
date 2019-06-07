@@ -4,7 +4,7 @@ import {
   Route,
   Switch,
 } from 'react-router-dom';
-import Report from 'Pages/reportai';
+import Report from 'Pages/Reportai';
 
 
 class Routes extends React.Component {
@@ -15,7 +15,7 @@ class Routes extends React.Component {
           <Route path="/report" component={Report} />
         </Switch>
       </Router>
-    )
+    );
   }
 }
 

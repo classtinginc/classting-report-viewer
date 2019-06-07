@@ -1,5 +1,5 @@
 
-.Rectangle {
+.student-info {
   width: 600px;
   height: 80px;
   box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
@@ -7,97 +7,137 @@
   margin: auto;
   margin-bottom: 10px;
   display : flex;
-}
 
-.student-profile {
-  width: 30px;
-  height: 30px;
-  background-color: #00c896;
-  border-radius: 50%;
-  margin-left: 45px;
-  margin-top: 14px;
-  float: left;
-  display: inline-block;
-}
+  .student-profile {
+    width: 120px;
 
+    .student-picture {
+      width: 30px;
+      height: 30px;
+      background-color: #00c896;
+      border-radius: 50%;
+      margin-left: 45px;
+      margin-top: 14px;
+      float: left;
+      display: inline-block;
+    }
 
-.student-name {
-  width: 80px;
-  height: 17px;
-  font-family: AppleSDGothicNeo;
-  font-size: 14px;
-  font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: center;
-  color: #000000;
-  padding-top: 50px;
-  padding-left: 20px;
-}
+    .student-name {
+      width: 80px;
+      height: 17px;
+      font-family: AppleSDGothicNeo;
+      font-size: 14px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #000000;
+      padding-top: 50px;
+      padding-left: 20px;
+    }
+  }
 
-.bar {
-  border-right: 1px solid #f5f5f5;
-}
+  .segment {
+    width: 1px;
+    height: 60px;
+    background-color: #f5f5f5;
+    margin-top: 10px;
+  }
 
+  .student-statistics {
+    margin-left: 20px;
 
-.total-study-text {
-  width: 100px;
-  height: 15px;
-  font-family: AppleSDGothicNeo;
-  font-size: 12px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #aaaaaa;
-  margin-top: 15px;
-  display: inline-block;
-}
+    .result-wrapper {
+      display: inline-block;
+      width: 100px;
+      margin-right: 10px;
 
-.total-study-wrapper {
-  margin-left: 20px;
-}
+      .result-title {
+        width: 100px;
+        height: 15px;
+        font-family: AppleSDGothicNeo;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #aaaaaa;
+        margin-top: 15px;
+        display: inline-block;
+      }
 
+      .result-time {
+        width: 49px;
+        height: 21px;
+        font-family: AppleSDGothicNeo;
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.17;
+        letter-spacing: normal;
+        color: #000000;
+        display: inline-block;
+        margin-top: 6px;
+      }
 
-.total-study-time {
-  width: 49px;
-  height: 21px;
-  font-family: AppleSDGothicNeo;
-  font-size: 18px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.17;
-  letter-spacing: normal;
-  color: #000000;
-  margin-top: 6px;
-}
+      .result-sub {
+        width: 11px;
+        height: 15px;
+        font-family: AppleSDGothicNeo;
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #000000;
+        display: inline-block;
+      }
 
-.total-study-time-plus {
-  width: 26px;
-  height: 12px;
-  font-family: AppleSDGothicNeo;
-  font-size: 10px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #ff4646;
-}
+      .result-count {
+        width: 22px;
+        height: 21px;
+        font-family: AppleSDGothicNeo;
+        font-size: 18px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #000000;
+        display: inline-block;
+        margin-top: 6px;
+      }
 
-.total-study-minus {
-  width: 23px;
-  height: 12px;
-  font-family: AppleSDGothicNeo;
-  font-size: 10px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #4a90e2;
+      .result-sum {
+        width: 26px;
+        height: 12px;
+        font-family: AppleSDGothicNeo;
+        font-size: 10px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #ff4646;
+      }
+
+      .result-enhancement {
+        width: 25px;
+        height: 12px;
+        font-family: AppleSDGothicNeo;
+        font-size: 8px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #4a90e2;
+      }
+    }
+  }
 }
