@@ -1,0 +1,131 @@
+@import "Style/_global.scss";
+
+.student_info {
+  height: 80px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  margin: auto auto 10px;
+  display : flex;
+
+  .student_profile {
+    width: 120px;
+
+    .student_picture {
+      width: 30px;
+      height: 30px;
+      background-color: #00c896;
+      border-radius: 50%;
+      margin: 14px auto 5px;
+
+      @media #{$classting_mobile} {
+          width: 24px;
+          height: 24px;
+          float: left;
+          margin: 8px 10px auto;
+      }
+    }
+
+    .student_name {
+      font-size: 12px;
+      font-weight: bold;
+      text-align: center;
+      color: #000000;
+
+      @media #{$classting_mobile} {
+          display: inline-block;
+          margin-top: 11px;
+      }
+    }
+    @media #{$classting_mobile} {
+        width: 100%;
+        height: 40px;
+    }
+  }
+
+  .segment {
+    width: 1.3px;
+    height: 60px;
+    background-color: #f5f5f5;
+    margin-top: 10px;
+
+    @media #{$classting_mobile} {
+        width: 95%;
+        height: 1px;
+        margin-top: 8px;
+        margin: 0 auto;
+    }
+  }
+
+  .student_statistics {
+    margin-left: 20px;
+
+    .result_wrapper {
+      display: inline-block;
+      width: 25%;
+      padding-left: 10px;
+
+      .title {
+        font-size: 12px;
+        color: #aaaaaa;
+        margin-top: 10px;
+        width: 90px;
+
+        @media #{$classting_mobile} {
+            font-size: 10px;
+            margin-top: 6px;
+        }
+      }
+
+      .time {
+        font-size: 18px;
+        color: #000000;
+        display: inline-block;
+        text-align: center;
+
+        @media #{$classting_mobile} {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+      }
+
+      .sub {
+        font-size: 12px;
+        color: #000000;
+        display: inline-block;
+      }
+
+      .count {
+        font-size: 18px;
+        color: #000000;
+        display: inline-block;
+        text-align: center;
+
+        @media #{$classting_mobile} {
+            font-size: 12px;
+            margin-top: 5px;
+        }
+      }
+
+      .up {
+        font-size: 10px;
+        color: #ff4646;
+      }
+
+      .down {
+        font-size: 10px;
+        color: #4a90e2;
+      }
+    }
+    @media #{$classting_mobile} {
+        margin-left: 0px;
+        width: 100%;
+        height: 65px;
+    }
+  }
+
+  @media #{$classting_mobile} {
+      width: 100%;
+      height: 106px;
+      display: inline-table;
+  }
+}

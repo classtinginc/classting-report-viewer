@@ -5,14 +5,16 @@
   "dependencies": {
     "eslint-config-airbnb": "^17.1.0",
     "firebase": "^6.1.0",
+    "http2": "^3.3.7",
     "node-sass": "^4.12.0",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1"
   },
   "scripts": {
-    "start": "NODE_PATH=./src react-scripts start",
+    "start": "NODE_PATH=./src set HTTPS=true && react-scripts start",
     "build": "NODE_PATH=./src react-scripts build",
     "deploy": "npm run build && aws s3 sync build/ s3://ai-report.classting.net",
     "test": "NODE_PATH=./src react-scripts test",
@@ -32,5 +34,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }
