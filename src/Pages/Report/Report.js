@@ -1,5 +1,8 @@
 import React from 'react';
-import firebase from 'firebase';
+import * as firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/database";
+import "firebase/firestore";
 import { withRouter } from 'react-router-dom';
 import StatsBar from 'Components/StatsBar';
 import * as constants from 'constants.js';
