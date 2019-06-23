@@ -193,9 +193,9 @@ class Report extends React.Component {
         const totalQuizzesCount = stat['quizzes_count'];
         const vedioDuration = stat['video_duration'];
         const quizDuration = stat['quiz_duration'];
-        const diffVideoDuration = 0;
-        const diffStudyDuration = 0;
-        const diffCorrectRate = 0;
+        let diffVideoDuration = 0;
+        let diffStudyDuration = 0;
+        let diffCorrectRate = 0;
 
         if (studentsList[i]['key'] === preStudentsList[j]['key']) {
           diffVideoDuration = stat['video_duration'] - preStat['video_duration'];
