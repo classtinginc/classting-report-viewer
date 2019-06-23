@@ -43,8 +43,12 @@ class Report extends React.Component {
   }
 
   componentDidMount() {
-    const accessToken = window.location.hash.split('&')[1].split('=')[1]
     const continueUrl = `authorize?client_id=${constants.TMP_CLIENT_ID}&redirect_uri=${constants.REDIRECT_URI}&response_type=token`;
+
+    if (window.location.hash === ''){
+      window.location.href = `https://auth.classting.net/v1/oauth2/${continueUrl}`;
+    }
+    const accessToken = window.location.hash.split('&')[1].split('=')[1]
     if (!accessToken) {
       window.location.href = `https://auth.classting.net/v1/oauth2/${continueUrl}`;
     }
