@@ -1,5 +1,6 @@
 import React from 'react';
 import firebase from 'firebase';
+import { withRouter } from 'react-router-dom';
 import StatsBar from 'Components/StatsBar';
 import * as constants from 'constants.js';
 import './Report.scss';
@@ -164,7 +165,6 @@ class Report extends React.Component {
   }
 
   render() {
-
     const {
       schoolName,
       grade,
@@ -180,52 +180,41 @@ class Report extends React.Component {
     const diffResult = [];
     for (let i=0; i < studentsList.length; i++) {
       for (let j=0; j < preStudentsList.length; j++) {
+        const stat = studentsList[i]['value'];
+        const preStat = preStudentsList[j]['value'];
+        const correctQuizzesCount = stat['correct_quizzes_count'];
+        const totalQuizzesCount = stat['quizzes_count'];
+        const vedioDuration = stat['video_duration'];
+        const quizDuration = stat['quiz_duration'];
+        const diffVideoDuration = 0;
+        const diffStudyDuration = 0;
+        const diffCorrectRate = 0;
+
         if (studentsList[i]['key'] === preStudentsList[j]['key']) {
-          const correctQuizzesCount = studentsList[i]['value']['correct_quizzes_count'];
-          const totalQuizzesCount = studentsList[i]['value']['quizzes_count'];
-          const vedioDuration = studentsList[i]['value']['video_duration'];
-          const quizDuration = studentsList[i]['value']['quiz_duration'];
-          const diffVideoDuration = studentsList[i]['value']['video_duration'] - preStudentsList[j]['value']['video_duration'];
-          const diffStudyDuration = (studentsList[i]['value']['quiz_duration']+studentsList[i]['value']['video_duration'])-(preStudentsList[j]['value']['quiz_duration']+preStudentsList[j]['value']['video_duration']);
-          const diffCorrectRate = (((studentsList[i]['value']['correct_quizzes_count']/studentsList[i]['value']['quizzes_count'])*100)-((preStudentsList[i]['value']['correct_quizzes_count']/preStudentsList[i]['value']['quizzes_count'])*100)).toFixed(2);
-          diffResult.push(
-            {
-              'key': studentsList[i]['key'],
-              'value':
-              {
-                'correctQuizzesCount': correctQuizzesCount,
-                'totalQuizzesCount': totalQuizzesCount,
-                'vedioDuration': vedioDuration,
-                'quizDuration': quizDuration,
-                'diffVideoDuration': diffVideoDuration,
-                'diffStudyDuration': diffStudyDuration,
-                'diffCorrectRate': diffCorrectRate
-              }
-            })
+          diffVideoDuration = stat['video_duration'] - preStat['video_duration'];
+          diffStudyDuration = (stat['quiz_duration']+stat['video_duration'])-(preStat['quiz_duration']+preStat['video_duration']);
+          diffCorrectRate = (((stat['correct_quizzes_count']/stat['quizzes_count'])*100)-((preStat['correct_quizzes_count']/preStat['quizzes_count'])*100)).toFixed(2);
+
         } else {
-          const correctQuizzesCount = studentsList[i]['value']['correct_quizzes_count'];
-          const totalQuizzesCount = studentsList[i]['value']['quizzes_count'];
-          const vedioDuration = studentsList[i]['value']['video_duration'];
-          const quizDuration = studentsList[i]['value']['quiz_duration'];
-          const diffVideoDuration = studentsList[i]['value']['video_duration'];
-          const diffStudyDuration = studentsList[i]['value']['quiz_duration']+studentsList[i]['value']['video_duration'];
-          const diffCorrectRate = (((studentsList[i]['value']['correct_quizzes_count']/studentsList[i]['value']['quizzes_count'])*100)).toFixed(2);
-          diffResult.push(
-            {
-              'key': studentsList[i]['key'],
-              'value':
-              {
-                'correctQuizzesCount': correctQuizzesCount,
-                'totalQuizzesCount': totalQuizzesCount,
-                'vedioDuration': vedioDuration,
-                'quizDuration': quizDuration,
-                'diffVideoDuration': diffVideoDuration,
-                'diffStudyDuration': diffStudyDuration,
-                'diffCorrectRate': diffCorrectRate
-              }
-            }
-          )
+          diffVideoDuration = stat['video_duration'];
+          diffStudyDuration = stat['quiz_duration']+stat['video_duration'];
+          diffCorrectRate = (((stat['correct_quizzes_count']/stat['quizzes_count'])*100)).toFixed(2);
         }
+        diffResult.push(
+          {
+            'key': studentsList[i]['key'],
+            'value':
+            {
+              'correctQuizzesCount': correctQuizzesCount,
+              'totalQuizzesCount': totalQuizzesCount,
+              'vedioDuration': vedioDuration,
+              'quizDuration': quizDuration,
+              'diffVideoDuration': diffVideoDuration,
+              'diffStudyDuration': diffStudyDuration,
+              'diffCorrectRate': diffCorrectRate
+            }
+          }
+        )
       }
     }
 
@@ -263,4 +252,4 @@ class Report extends React.Component {
 }
 
 
-export default Report;
+export default withRouter(Report);
